@@ -1,12 +1,8 @@
 # interview1
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+This project is generated just for testing
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Run npm install, bower install, and gulp serve
+if any question contact teonapster@gmail.com
