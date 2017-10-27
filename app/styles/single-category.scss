@@ -1,0 +1,35 @@
+@import 'variables.scss';
+
+single-category{
+  height: 400px;
+  margin: 15px;
+
+  .category-wrapper{
+    width: 100%;
+    height: 100%;
+
+
+    .img-wrapper{
+        height: 60%;
+        background-color: $lightGray;
+    }
+
+    .content-wrapper{
+        height: 40%;
+        background: $white;
+        padding: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+
+        .main-text{
+          color: $lightGray;
+        }
+
+        .h4{
+          color: $gray;
+        }
+    }
+  }
+
+}
