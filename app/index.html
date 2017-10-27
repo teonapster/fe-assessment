@@ -9,12 +9,15 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/single-category.css">
+    <link rel="stylesheet" href="styles/sources.css">
+    <link rel="stylesheet" href="styles/pagination.css">
     <!-- endbuild -->
   </head>
   <body ng-app="interview1App">
@@ -65,12 +68,18 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/components/header/header.component.js"></script>
-        <script src="scripts/components/categories/categories.component.js"></script>
+        <script src="scripts/components/sources/sources.component.js"></script>
         <script src="scripts/components/single-category/single-category.component.js"></script>
         <script src="scripts/components/about/about.component.js"></script>
+        <script src="scripts/components/pagination/pagination.component.js"></script>
 
         <script src="scripts/services/http.service.js"></script>
         <script src="scripts/services/news-api.service.js"></script>
         <!-- endbuild -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script>
+    _ = _.noConflict(); // lets call ourselves _u
+    </script>
 </body>
 </html>

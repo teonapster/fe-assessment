@@ -11,13 +11,13 @@
 
   function NewsApi(http) {
     var service = {
-      categories,
+      sources,
       articles
     }
 
     return service;
 
-    function categories() {
+    function sources() {
       let params = {
       };
       return http.get(params, 'https://newsapi.org/v1/sources?language=en')

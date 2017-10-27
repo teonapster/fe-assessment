@@ -6,26 +6,39 @@ single-category {
 single-category .category-wrapper {
   width: 100%;
   height: 100%;
+  border-radius: 8px;
 }
 
 single-category .category-wrapper .img-wrapper {
   height: 60%;
   background-color: #b1bfcf;
+  border-radius: 8px 8px 0 0;
+}
+
+single-category .category-wrapper .text-hide, single-category .category-wrapper .content-wrapper, single-category .category-wrapper .content-wrapper .main-text, single-category .category-wrapper .content-wrapper .h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 single-category .category-wrapper .content-wrapper {
   height: 40%;
   background: white;
   padding: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
+  border-radius: 0 0 8px 8px;
 }
 
 single-category .category-wrapper .content-wrapper .main-text {
   color: #b1bfcf;
+  height: 60%;
+  margin-bottom: 5px;
 }
 
 single-category .category-wrapper .content-wrapper .h4 {
+  height: 20%;
   color: #8a939f;
+}
+
+single-category .category-wrapper .content-wrapper small {
+  height: 20%;
 }

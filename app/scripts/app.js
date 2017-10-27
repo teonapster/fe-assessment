@@ -21,7 +21,7 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        template: '<categories></categories>',
+        template: '<sources></sources>',
       })
       .when('/articles', {
         template: '<articles></articles>'

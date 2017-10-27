@@ -1,0 +1,22 @@
+/*TODO remove dirty :) importants!!!!!!!!!*/
+pagination {
+  width: 100%;
+}
+
+pagination input {
+  display: inline-block !important;
+  width: 100px !important;
+}
+
+pagination button {
+  width: 50px !important;
+  display: inline-block !important;
+}
+
+pagination button .left {
+  border-radius: 4px 0px 0px 4px;
+}
+
+pagination button .right {
+  border-radius: 0px 4px 4px 0px;
+}
