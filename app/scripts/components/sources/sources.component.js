@@ -13,24 +13,13 @@
       vm.currentPage = 1;
       vm.totalSources = 0;
 
-
-      vm.filterByName = () => {
-        if (!vm.selectedName) {
-          vm.filteredSources = vm.sources;
-        } else {
-          vm.filteredSources = _.filter(vm.sources, (source) => { return source.name.toLowerCase().indexOf(vm.selectedName.toLowerCase()) > -1 })
-        }
-
-        vm.pageChanged(1);
-      }
-
-      vm.filterByCategory = () => {
+      vm.filterEvaluate = () => {
 
         //Revert if no selected category
-        if (!vm.selectedCategory) {
+        if (!vm.selectedCategory && !vm.selectedName) {
           vm.filteredSources = vm.sources;
         } else {
-          vm.filteredSources = _.filter(vm.sources, (source) => { return source.category === vm.selectedCategory })
+          vm.filteredSources = _.filter(vm.sources, (source) => { return source.category === vm.selectedCategory || source.name.toLowerCase().indexOf(vm.selectedName.toLowerCase()) > -1})
         }
 
         vm.pageChanged(1);
@@ -41,6 +30,7 @@
         vm.currentPage = page;
         const offset = (page - 1) * vm.pageSize;
         vm.paginatedSources = _.slice(vm.filteredSources, offset, offset + vm.pageSize);
+        vm.totalSources = vm.filteredSources ? vm.filteredSources.length : 0;
       }
 
       vm.$onInit = function () {

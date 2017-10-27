@@ -1,4 +1,4 @@
 <div id="pagination-wrapper" ng-if="$ctrl.totalRecords > $ctrl.pageSize">
   <pre id="pagination-notifier">
-    displaying page <button class="form-control left" ng-click="$ctrl.changePage(true)" > <i class="fa fa-caret-left"></i></button><input type="text" class="form-control" ng-model=$ctrl.currentPage ng-change="$ctrl.changePage()" /> of {{$ctrl.currentPage * $ctrl.pageSize > $ctrl.totalRecords ?  (($ctrl.currentPage-1) * $ctrl.pageSize + ($ctrl.totalRecords % $ctrl.pageSize))/ $ctrl.pageSize : $ctrl.currentPage * $ctrl.pageSize / $ctrl.pageSize}} <button ng-click="$ctrl.changePage(false)" class="form-control right"> <i class="fa fa-caret-right"></i></button></pre>
+    displaying page <button class="form-control left" ng-disabled="$ctrl.currentPage <= 1" ng-click="$ctrl.changePage(true)" > <i class="fa fa-caret-left"></i></button><input type="text" class="form-control" ng-model=$ctrl.currentPage ng-change="$ctrl.changePage()" /> of {{$ctrl.getTotalPages()}}<button ng-disabled="$ctrl.currentPage >= $ctrl.getTotalPages()" ng-click="$ctrl.changePage(false)" class="form-control right"> <i class="fa fa-caret-right"></i></button></pre>
 </div>

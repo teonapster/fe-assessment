@@ -32,11 +32,13 @@
       }
     };
     this.$onChanges = function (changesObj) { };
-
+    this.getTotalPages = function () {
+      return Math.ceil(this.totalRecords / this.pageSize)
+    }
     this.changePage = function (decrease) {
       if (decrease && this.currentPage > 1) {
         this.currentPage--;
-      } else if(!decrease){
+      } else if (!decrease && this.getTotalPages() > this.currentPage) {
         this.currentPage++;
       }
 

@@ -1,8 +1,8 @@
 <div class="row filter-wrapper">
   <div class="col-md-6 col-sm-12 pull-right">
-    <div class="col-xs-6"><input type="text" ng-change="vm.filterByName()" ng-model="vm.selectedName" class="form-control" /></div>
+    <div class="col-xs-6"><input type="text" ng-change="vm.filterEvaluate()" ng-model="vm.selectedName" class="form-control" /></div>
     <div class="col-xs-6">
-      <select class="form-control" ng-options="category for category in vm.categories" ng-change="vm.filterByCategory()" ng-model="vm.selectedCategory">
+      <select class="form-control" ng-options="category for category in vm.categories" ng-change="vm.filterEvaluate()" ng-model="vm.selectedCategory">
         <option  value="">Choose category</option>
       </select>
     </div>
