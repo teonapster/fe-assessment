@@ -21,7 +21,7 @@
         if (!vm.selectedCategory && !vm.selectedName) {
           vm.filteredSources = vm.sources;
         } else {
-          vm.filteredSources = _.filter(vm.sources, (source) => { return source.category === vm.selectedCategory || source.name.toLowerCase().indexOf(vm.selectedName.toLowerCase()) > -1})
+          vm.filteredSources = _.filter(vm.sources, (source) => { return source.category === vm.selectedCategory && source.name.toLowerCase().indexOf(vm.selectedName.toLowerCase()) > -1})
         }
 
         vm.pageChanged(1);
