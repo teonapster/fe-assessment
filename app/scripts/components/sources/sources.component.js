@@ -13,6 +13,8 @@
       vm.currentPage = 1;
       vm.totalSources = 0;
 
+      vm.selectedName = "";
+      
       vm.filterEvaluate = () => {
 
         //Revert if no selected category
